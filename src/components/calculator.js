@@ -4,6 +4,7 @@ import CalculatorTitle from "./calculatorTitle";
 import OutputScreen from "./outputScreen";
 import HistoryTitle from "./historyTitle";
 import History from "./history";
+import Suggestion from "./suggestion";
 
 class Calculator extends React.Component {
 
@@ -71,6 +72,7 @@ class Calculator extends React.Component {
     render() {
         return (
             <div className="frame">
+                <Suggestion answer={this.state.answer}/>
                 <CalculatorTitle value="Calculator"/>
                 <div className="mainCalc">
                     <OutputScreen question={this.state.question} answer={this.state.answer}/>
