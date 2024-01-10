@@ -3,6 +3,7 @@ import Button from "./button";
 import CalculatorTitle from "./calculatorTitle";
 import OutputScreen from "./outputScreen";
 import HistoryTitle from "./historyTitle";
+import History from "./history";
 
 class Calculator extends React.Component {
 
@@ -31,16 +32,14 @@ class Calculator extends React.Component {
                     try {
                         ans = eval(this.state.question);
                     } catch (err) {
-                        this.setState({ answer: "Math Error" });
+                        this.setState({answer: "Math Error"});
                     }
-                    if (ans === undefined) this.setState({ answer: "Math Error" });
+                    if (ans === undefined) this.setState({answer: "Math Error"});
                     else {
-                        // Update answer in state
                         this.setState((prevState) => ({
                             answer: ans,
                             question: "",
-                            // Add the new calculation to history
-                            history: [...prevState.history, `${prevState.question} = ${ans}`],
+                            history: [...prevState.history, {calculation: prevState.question, result: ans}],
                         }));
                     }
                     break;
@@ -106,11 +105,7 @@ class Calculator extends React.Component {
                 </div>
                 <div>
                     <HistoryTitle value={"History"}/>
-                    <ul>
-                        {this.state.history.map((calculation, index) => (
-                            <li key={index}>{calculation}</li>
-                        ))}
-                    </ul>
+                    <History history={this.state.history}/>
                 </div>
             </div>
         );
