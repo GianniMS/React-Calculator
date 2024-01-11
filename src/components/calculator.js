@@ -71,16 +71,14 @@ class Calculator extends React.Component {
 
     render() {
         return (
-            <div className="frame">
+            <div className="frame" style={{padding: 20}}>
                 <Suggestion answer={this.state.answer}/>
                 <CalculatorTitle value="Calculator"/>
-                <div className="mainCalc">
+                <div className="mainCalc" style={{ backgroundColor: 'gray', padding: 20, width: "110px"}}>
                     <OutputScreen question={this.state.question} answer={this.state.answer}/>
                     <div className="button-row">
                         <Button label={"Clear"} handleClick={this.handleClick}/>
                         <Button label={"Delete"} handleClick={this.handleClick}/>
-                        <Button label={"."} handleClick={this.handleClick}/>
-                        <Button label={"/"} handleClick={this.handleClick}/>
                     </div>
                     <div className="button-row">
                         <Button label={"7"} handleClick={this.handleClick}/>
@@ -103,6 +101,8 @@ class Calculator extends React.Component {
                     <div className="button-row">
                         <Button label={"0"} handleClick={this.handleClick}/>
                         <Button label={"="} handleClick={this.handleClick}/>
+                        <Button label={"."} handleClick={this.handleClick}/>
+                        <Button label={"/"} handleClick={this.handleClick}/>
                     </div>
                 </div>
                 <div>

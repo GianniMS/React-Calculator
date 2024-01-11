@@ -20,12 +20,12 @@ const Suggestion = (props) => {
     }
 
     return (
-        <div className="wrapper">
-            <h2>Number is: {num}</h2>
-            <button onClick={handleClick}>
-                Click Me Generate
+        <div className="wrapper"  style={{ backgroundColor: 'white', padding: 10}}>
+            <h2>Suggested number is: {num}</h2>
+            <button onClick={handleClick} style={{ backgroundColor: 'black', color: 'white'}}>
+                Suggest a number
             </button>
-            <h2>{result}</h2>
+            <h2>Match the suggestion: {result}</h2>
         </div>
     );
 };

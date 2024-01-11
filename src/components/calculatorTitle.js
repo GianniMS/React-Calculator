@@ -2,7 +2,7 @@ import React from "react";
 
 const CalculatorTitle = (props) => {
     return (
-        <div className="calculator-title">{props.value}</div>
+        <h3 className="calculator-title">{props.value}</h3>
     );
 };
 
