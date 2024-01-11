@@ -71,43 +71,48 @@ class Calculator extends React.Component {
 
     render() {
         return (
-            <div className="frame" style={{padding: 20}}>
-                <Suggestion answer={this.state.answer}/>
-                <CalculatorTitle value="Calculator"/>
-                <div className="mainCalc" style={{ backgroundColor: 'gray', padding: 20, width: "110px"}}>
-                    <OutputScreen question={this.state.question} answer={this.state.answer}/>
-                    <div className="button-row">
-                        <Button label={"Clear"} handleClick={this.handleClick}/>
-                        <Button label={"Delete"} handleClick={this.handleClick}/>
+            <div className="frame" style={{padding: 20, display: "flex", alignItems: "center"}}>
+                <div style={{display: "flex", flexDirection: "column", marginLeft: "50px"}}>
+                    <CalculatorTitle value="Calculator"/>
+                    <div className="mainCalc" style={{backgroundColor: 'gray', padding: 20, width: "110px"}}>
+                        <OutputScreen question={this.state.question} answer={this.state.answer}/>
+                        <div className="button-row">
+                            <Button label={"Clear"} handleClick={this.handleClick}/>
+                            <Button label={"Delete"} handleClick={this.handleClick}/>
+                        </div>
+                        <div className="button-row">
+                            <Button label={"7"} handleClick={this.handleClick}/>
+                            <Button label={"8"} handleClick={this.handleClick}/>
+                            <Button label={"9"} handleClick={this.handleClick}/>
+                            <Button label={"*"} handleClick={this.handleClick}/>
+                        </div>
+                        <div className="button-row">
+                            <Button label={"4"} handleClick={this.handleClick}/>
+                            <Button label={"5"} handleClick={this.handleClick}/>
+                            <Button label={"6"} handleClick={this.handleClick}/>
+                            <Button label={"-"} handleClick={this.handleClick}/>
+                        </div>
+                        <div className="button-row">
+                            <Button label={"1"} handleClick={this.handleClick}/>
+                            <Button label={"2"} handleClick={this.handleClick}/>
+                            <Button label={"3"} handleClick={this.handleClick}/>
+                            <Button label={"+"} handleClick={this.handleClick}/>
+                        </div>
+                        <div className="button-row">
+                            <Button label={"0"} handleClick={this.handleClick}/>
+                            <Button label={"="} handleClick={this.handleClick}/>
+                            <Button label={"."} handleClick={this.handleClick}/>
+                            <Button label={"/"} handleClick={this.handleClick}/>
+                        </div>
                     </div>
-                    <div className="button-row">
-                        <Button label={"7"} handleClick={this.handleClick}/>
-                        <Button label={"8"} handleClick={this.handleClick}/>
-                        <Button label={"9"} handleClick={this.handleClick}/>
-                        <Button label={"*"} handleClick={this.handleClick}/>
+                    <div>
+                        <HistoryTitle value={"History"}/>
+                        <History history={this.state.history}/>
                     </div>
-                    <div className="button-row">
-                        <Button label={"4"} handleClick={this.handleClick}/>
-                        <Button label={"5"} handleClick={this.handleClick}/>
-                        <Button label={"6"} handleClick={this.handleClick}/>
-                        <Button label={"-"} handleClick={this.handleClick}/>
-                    </div>
-                    <div className="button-row">
-                        <Button label={"1"} handleClick={this.handleClick}/>
-                        <Button label={"2"} handleClick={this.handleClick}/>
-                        <Button label={"3"} handleClick={this.handleClick}/>
-                        <Button label={"+"} handleClick={this.handleClick}/>
-                    </div>
-                    <div className="button-row">
-                        <Button label={"0"} handleClick={this.handleClick}/>
-                        <Button label={"="} handleClick={this.handleClick}/>
-                        <Button label={"."} handleClick={this.handleClick}/>
-                        <Button label={"/"} handleClick={this.handleClick}/>
-                    </div>
+
                 </div>
-                <div>
-                    <HistoryTitle value={"History"}/>
-                    <History history={this.state.history}/>
+                <div style={{marginLeft: "50px"}}>
+                <Suggestion answer={this.state.answer}/>
                 </div>
             </div>
         );
