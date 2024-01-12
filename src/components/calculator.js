@@ -71,10 +71,15 @@ class Calculator extends React.Component {
 
     render() {
         return (
-            <div className="frame" style={{padding: 20, display: "flex", alignItems: "center"}}>
+            <div className="frame"
+                 style={{padding: 20, display: "flex", flexDirection: "column", justifyContent: "space-around"}}>
+                <div style={{marginLeft: "50px"}}>
+                    <Suggestion answer={this.state.answer}/>
+                </div>
                 <div style={{display: "flex", flexDirection: "column", marginLeft: "50px"}}>
                     <CalculatorTitle value="Calculator"/>
-                    <div className="mainCalc" style={{backgroundColor: 'gray', padding: 20, width: "110px"}}>
+                    <div className="mainCalc"
+                         style={{backgroundColor: 'gray', padding: 20, width: "110px"}}>
                         <OutputScreen question={this.state.question} answer={this.state.answer}/>
                         <div className="button-row">
                             <Button label={"Clear"} handleClick={this.handleClick}/>
@@ -109,10 +114,6 @@ class Calculator extends React.Component {
                         <HistoryTitle value={"History"}/>
                         <History history={this.state.history}/>
                     </div>
-
-                </div>
-                <div style={{marginLeft: "50px"}}>
-                <Suggestion answer={this.state.answer}/>
                 </div>
             </div>
         );
