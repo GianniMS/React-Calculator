@@ -1,5 +1,6 @@
 import React from "react";
 import OutputScreenRow from "./outputScreenRow";
+import "./style/outputScreen.css";
 
 const OutputScreen = (props) => {
     return (

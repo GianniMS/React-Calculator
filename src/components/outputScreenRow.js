@@ -1,9 +1,10 @@
 import React from "react";
+import "./style/outputScreenRow.css";
 
 const OutputScreenRow = (props) => {
     return (
         <div className="screen-row">
-            <input type="text" readOnly value={props.value} style={{ backgroundColor: "green", width: "100px"}}/>
+            <input className="sr-bar" type="text" readOnly value={props.value}/>
         </div>
     );
 };

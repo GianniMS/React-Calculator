@@ -1,0 +1,14 @@
+.screen-row {
+    width: 16vw;
+
+}
+
+.sr-bar {
+    width: 16vw;
+    height: 6vh;
+    margin-top: 1vh;
+    background-color: green;
+    border-radius: 15px;
+    font-size: 2vw;
+}
+

@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import "./style/suggestion.css";
 
 const Suggestion = (props) => {
     const [num, setNum] = useState(0);
@@ -20,9 +21,9 @@ const Suggestion = (props) => {
     }
 
     return (
-        <div className="wrapper"  style={{ backgroundColor: 'white', padding: 10}}>
+        <div className="wrapper">
             <h2>Suggested number is: {num}</h2>
-            <button onClick={handleClick} style={{ backgroundColor: 'black', color: 'white'}}>
+            <button onClick={handleClick}>
                 Suggest a number
             </button>
             <h2>Match the suggestion: {result}</h2>
