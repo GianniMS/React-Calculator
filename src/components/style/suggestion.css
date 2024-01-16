@@ -1,0 +1,8 @@
+* button {
+    width: 150px;
+    height: 35px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}

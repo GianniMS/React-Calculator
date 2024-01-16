@@ -1,0 +1,12 @@
+.calculator-title {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 3vw;
+}
+
+* span {
+    color: #A48374;
+}

@@ -1,6 +1,8 @@
 .button {
     width: 50px;
     height: 35px;
-    background-color: deepskyblue;
-    border-radius: 15px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
 }
